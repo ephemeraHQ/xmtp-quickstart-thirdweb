@@ -72,10 +72,17 @@ Use the `Web3Button` hook to get the wallet modal button.
 
 ### Step 3: XMTP Integration
 
-In your `Home` component, use the `useClient` hook from `@xmtp/react-sdk` to get the XMTP client.
+In your component, use the `useSigner` hook from `@xmtp/react-sdk` to get the XMTP client.
 
 ```jsx
+import { useSigner } from "@thirdweb-dev/react";
+import { useClient } from "@xmtp/react-sdk";
+
+//Thirdweb
 const signer = useSigner();
+//XMTP
+const { client, error, isLoading, initialize } = useClient();
+await initialize({ keys, options, signer });
 ```
 
 ### Step 4: Message Handling
