@@ -9,13 +9,35 @@ bun start
 
 This tutorial will guide you through the process of creating an XMTP app with Thirdweb.
 
+### Step 0: Setup
+
+For thirdweb SDK to work as a fresh install you need to install this packages
+
+```bash
+npm install @thirdweb-dev/react "ethers@^5"
+```
+
+You also need to polyfill with multiple libraries. Copy paste this into your `packages.json`
+
+````bash
+"url": "latest",
+"http": "npm:http-browserify",
+"https": "npm:https-browserify",
+"zlib": "npm:browserify-zlib",
+"http-browserify": "latest",
+"https-browserify": "latest",
+"browserify-zlib": "latest",
+"assert": "^2.0.0",
+"stream": "^0.0.2"
+```
+
 ### Step 1: Setup
 
 First, you need to import the necessary libraries and components. In your index.js file, import the `ThirdwebProvider` from @Thirdweb-io/react-auth and wrap your main component with it.
 
 ```jsx
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-```
+````
 
 ```jsx
 <ThirdwebProvider
