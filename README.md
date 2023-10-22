@@ -19,7 +19,7 @@ npm install @thirdweb-dev/react "ethers@^5"
 
 You also need to polyfill with multiple libraries. Copy paste this into your `packages.json`
 
-````bash
+```bash
 "url": "latest",
 "http": "npm:http-browserify",
 "https": "npm:https-browserify",
@@ -37,7 +37,7 @@ First, you need to import the necessary libraries and components. In your index.
 
 ```jsx
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-````
+```
 
 ```jsx
 <ThirdwebProvider
