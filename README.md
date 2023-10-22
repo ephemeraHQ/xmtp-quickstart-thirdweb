@@ -33,7 +33,7 @@ You also need to polyfill with multiple libraries. Copy paste this into your `pa
 
 ### Step 1: Setup
 
-First, you need to import the necessary libraries and components. In your index.js file, import the `ThirdwebProvider` from @Thirdweb-io/react-auth and wrap your main component with it.
+First, you need to import the necessary libraries and components. In your `App.js` file, import the `ThirdwebProvider` from `@thirdweb-dev/react` and wrap your main component with it.
 
 ```jsx
 import { ThirdwebProvider } from "@thirdweb-dev/react";
@@ -54,6 +54,8 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 ### Step 2: Web3Button
 
 Use the `Web3Button` hook to get the wallet modal button.
+
+![](modal.png)
 
 ```jsx
 {
