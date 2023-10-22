@@ -1,0 +1,55 @@
+{
+  "name": "xmtp-quickstart-hooks",
+  "version": "0.1.0",
+  "private": true,
+  "start_url": "/",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "dependencies": {
+    "@thirdweb-dev/react": "latest",
+    "@xmtp/react-sdk": "latest",
+    "assert": "^2.0.0",
+    "browserify-zlib": "latest",
+    "buffer": "^6.0.3",
+    "ethers": "^5.7.0",
+    "http": "npm:http-browserify",
+    "http-browserify": "latest",
+    "https": "npm:https-browserify",
+    "https-browserify": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "^5.0.1",
+    "stream": "^0.0.2",
+    "url": "latest",
+    "zlib": "npm:browserify-zlib"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "@babel/plugin-proposal-private-property-in-object": "latest"
+  }
+}
