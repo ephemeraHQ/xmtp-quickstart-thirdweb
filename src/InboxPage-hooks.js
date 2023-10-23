@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { FloatingInbox } from "./FloatingInbox-hooks";
 import { useSigner } from "@thirdweb-dev/react";
-import { useLogout } from "@thirdweb-dev/react";
+import { useDisconnect } from "@thirdweb-dev/react";
 import { useLogin, Web3Button } from "@thirdweb-dev/react";
 
 const InboxPage = () => {
   const signer = useSigner();
-  const { logout } = useLogout();
+  const disconnect = useDisconnect();
   const { login } = useLogin();
   const [loggingOut, setLoggingOut] = useState(false); // Add this line
 
   const handleLogout = async () => {
     setLoggingOut(true); // Set loggingOut to true when logout begins
-    await logout();
+    await disconnect();
     setLoggingOut(false); // Set loggingOut to false when logout ends
   };
 
