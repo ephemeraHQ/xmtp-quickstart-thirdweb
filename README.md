@@ -3,8 +3,8 @@
 ### Installation
 
 ```bash
-bun install
-bun start
+npm install
+npm run start
 ```
 
 This tutorial will guide you through the process of creating an XMTP app with Thirdweb.
