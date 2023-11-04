@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import InboxPage from "./InboxPage-hooks";
+import InboxPage from "./Page";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
+import Page from "./Page";
 
 export default function App() {
   const [ready, setReady] = useState(false);
@@ -18,7 +19,7 @@ export default function App() {
           }}
           activeChain="ethereum"
         >
-          <InboxPage />
+          <Page />
         </ThirdwebProvider>
       ) : null}
     </>
