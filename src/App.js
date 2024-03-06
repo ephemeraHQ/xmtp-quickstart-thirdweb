@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import InboxPage from "./Page";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
+import embeddedWallet from "./CustomWallet";
 import Page from "./Page";
 
 export default function App() {
@@ -17,6 +17,7 @@ export default function App() {
             authUrl: "/",
             domain: "http://localhost:3000/",
           }}
+          supportedWallets={[embeddedWallet()]}
           activeChain="ethereum"
         >
           <Page />

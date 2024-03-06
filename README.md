@@ -1,13 +1,31 @@
-# XMTP PWA with Thirdweb Tutorial
+# XMTP PWA with WalletConnect & Wagmi
 
-### Installation
+![xmtp](https://github.com/xmtp/xmtp-quickstart-reactjs/assets/1447073/3f2979ec-4d13-4c3d-bf20-deab3b2ffaa1)
+
+## Installation
 
 ```bash
-npm install
-npm run start
+yarn install
+yarn dev
 ```
 
-This tutorial will guide you through the process of creating an XMTP app with Thirdweb.
+## Concepts
+
+Head to our docs to understand XMTP's concepts
+
+- [Get started](https://xmtp.org/docs/build/get-started/overview?sdk=react)
+- [Authentication](https://xmtp.org/docs/build/authentication?sdk=react)
+- [Conversations](https://xmtp.org/docs/build/conversations?sdk=react)
+- [Messages](https://xmtp.org/docs/build/messages/?sdk=react)
+- [Streams](https://xmtp.org/docs/build/streams/?sdk=react)
+
+#### Troubleshooting
+
+If you get into issues with `Buffer` and `polyfills` check out the fix below:
+
+- [Check out Buffer issue](https://github.com/xmtp/xmtp-js/issues/487)
+
+## Thirdweb
 
 ### Step 0: Setup
 
@@ -85,24 +103,6 @@ const signer = useSigner();
 //XMTP
 const { client, error, isLoading, initialize } = useClient();
 await initialize({ keys, options, signer });
-```
-
-### Step 4: Message Handling
-
-In your `MessageContainer` component, use the `useMessages` and `useSendMessage` hooks from `@xmtp/react-sdk` to get the messages and send messages.
-
-```jsx
-const { messages, isLoading } = useMessages(conversation);
-const { sendMessage } = useSendMessage();
-```
-
-### Step 5: Conversation Handling
-
-In your ListConversations component, use the useConversations and useStreamConversations hooks from @xmtp/react-sdk to get the conversations and stream new conversations.
-
-```jsx
-const { conversations } = useConversations();
-const { error } = useStreamConversations(onConversation);
 ```
 
 That's it! You've now created an XMTP app with Thirdweb.
