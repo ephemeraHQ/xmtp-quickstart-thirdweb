@@ -27,7 +27,7 @@ If you get into issues with `Buffer` and `polyfills` check out the fix below:
 
 ## Thirdweb
 
-### Step 0: Setup
+### Getting started
 
 For thirdweb SDK to work as a fresh install you need to install this packages
 
@@ -49,7 +49,7 @@ You also need to polyfill with multiple libraries. Copy paste this into your `pa
 "stream": "^0.0.2"
 ```
 
-### Step 1: Setup
+### Setup
 
 First, you need to import the necessary libraries and components. In your `App.js` file, import the `ThirdwebProvider` from `@thirdweb-dev/react` and wrap your main component with it.
 
@@ -69,7 +69,7 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 </ThirdwebProvider>
 ```
 
-### Step 2: Web3Button
+### Web3Button
 
 Use the `Web3Button` hook to get the wallet modal button.
 
@@ -90,7 +90,7 @@ Use the `Web3Button` hook to get the wallet modal button.
 }
 ```
 
-### Step 3: XMTP Integration
+### XMTP Integration
 
 In your component, use the `useSigner` hook from `@xmtp/react-sdk` to get the XMTP client.
 
